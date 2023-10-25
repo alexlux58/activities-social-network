@@ -1160,11 +1160,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\Persistence\\Persistence.csproj",
+      "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\Persistence.csproj",
       "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\Persistence\\obj\\",
+      "outputPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1179,8 +1179,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\Domain\\Domain.csproj"
+            "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj"
             }
           }
         }

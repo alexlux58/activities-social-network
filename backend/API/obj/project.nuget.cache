@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MxE52Y7hmMoRPmzE1ofpu+2wrUwkDotydi3mrDMVB5FyJCk4vwUDtBG2wpyKp7HogUy04OVr5ZkgbD91m7jQQg==",
+  "dgSpecHash": "IOxuqHgg8hUlMdvWifkz9FZ2Lt3SYREwiaDyn57/NdiP3J0arWrNXxCQUR83rQmB2HHHtmXw7lTYttM7vx2c7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Lux\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
