@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\API\\API.csproj": {}
+    "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\API\\API.csproj": {
+    "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\API\\obj\\",
+        "projectPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\alexl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\alexl\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Application\\Application.csproj"
+              "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj"
               }
             }
           }
@@ -76,21 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Application\\Application.csproj": {
+    "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Application\\obj\\",
+        "projectPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\alexl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\alexl\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -102,11 +102,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj"
+              "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\Persistence.csproj": {
-                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\Persistence.csproj"
+              "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -120,6 +120,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -136,21 +142,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj": {
+    "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\alexl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\alexl\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -189,21 +195,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Persistence\\obj\\",
+        "projectPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\alexl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\alexl\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -215,8 +221,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj"
+              "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj"
               }
             }
           }
@@ -252,7 +258,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

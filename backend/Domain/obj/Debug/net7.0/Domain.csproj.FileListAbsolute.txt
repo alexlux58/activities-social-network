@@ -20,3 +20,14 @@ C:\Users\Alex Lux\Desktop\React-DOTNET\Udemy-NetCore-React\Reactivities\backend\
 C:\Users\Alex Lux\Desktop\React-DOTNET\Udemy-NetCore-React\Reactivities\backend\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\Alex Lux\Desktop\React-DOTNET\Udemy-NetCore-React\Reactivities\backend\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\Alex Lux\Desktop\React-DOTNET\Udemy-NetCore-React\Reactivities\backend\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\alexl\Desktop\activities-social-network\backend\Domain\obj\Debug\net7.0\ref\Domain.dll

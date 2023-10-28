@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AXR5VvVTks2uLYp7MiWOskdiRqWiHT9M+wFXuAYJAOtf7a3U8lP/Q4NLdbHD/8skZ96BznjS2wMp3thSZZvekg==",
+  "dgSpecHash": "VyRnfr+ZbQzveJkrsEMakRGImAhlPlWju9DLurBhBtX/9123lIeHUeiJmGD7h4jYwwCEZOeSPoQbO6nPHM1XAg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\React-DOTNET\\Udemy-NetCore-React\\Reactivities\\backend\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
