@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "HUzYDzwsDtsKl7eltCVH/pEttkMOoHOZD7aJDUi18H4tJ+4/pFdG3QZKiaAT5BD2CB6dWvCuB7l0Ha+7oU/uJQ==",
+  "dgSpecHash": "X92JfZBVBY3Z0mdkH3YOQIvQlDNyslwS0Pef4tAv3L4i7Ke+EldqTQSJCSxJwGq75VFocanx7KDr6aZQut6VoA==",
   "success": true,
   "projectFilePath": "C:\\Users\\alexl\\Desktop\\activities-social-network\\backend\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\alexl\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\alexl\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\mediatr\\12.1.1\\mediatr.12.1.1.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+    "C:\\Users\\alexl\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.10\\microsoft.data.sqlite.core.7.0.10.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
     "C:\\Users\\alexl\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.10\\microsoft.entityframeworkcore.abstractions.7.0.10.nupkg.sha512",
