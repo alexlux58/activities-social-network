@@ -9,7 +9,7 @@ namespace API.Controllers
 {
     public class ActivitiesController : BaseApiController
     {
-        [HttpGet]
+        [HttpGet] // /api/activities
         public async Task<ActionResult<List<Activity>>> GetActivities(CancellationToken ct)
         {
             return await Mediator.Send(new List.Query(), ct);
@@ -28,7 +28,7 @@ namespace API.Controllers
             return Ok();
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("{id}")] // /api/activities/id
         public async Task<IActionResult> EditActivity(Guid id, Activity activity)
         {
             activity.Id = id;
@@ -37,7 +37,7 @@ namespace API.Controllers
             return Ok();
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}")] // /api/activities/id
         public async Task<IActionResult> DeleteActivity(Guid id)
         {
             await Mediator.Send(new Delete.Command{Id = id});
