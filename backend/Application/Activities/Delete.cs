@@ -24,7 +24,7 @@ namespace Application.Activities
                 
                 _context.Remove(activity);
                 
-                await _context.SaveChangesAsync(cancellationToken);
+                await _context.SaveChangesAsync();
                
             }
         }
