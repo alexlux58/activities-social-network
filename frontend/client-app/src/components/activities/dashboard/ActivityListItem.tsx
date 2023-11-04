@@ -1,26 +1,12 @@
-import { Button, Icon, Item, Label, Segment } from "semantic-ui-react";
+import { Button, Icon, Item, Segment } from "semantic-ui-react";
 import { Activity } from "../../../app/models/activity";
 import { Link } from "react-router-dom";
-import { useStore } from "../../../app/stores/store";
-import { SyntheticEvent, useState } from "react";
 
 interface Props {
   activity: Activity;
 }
 
 const ActivityListItem = ({ activity }: Props) => {
-  const [target, setTarget] = useState("");
-  const { activityStore } = useStore();
-  const { deleteActivity, loading } = activityStore;
-
-  const handleActivityDelete = (
-    e: SyntheticEvent<HTMLButtonElement>,
-    id: string
-  ) => {
-    setTarget(e.currentTarget.name);
-    deleteActivity(id);
-  };
-
   return (
     <Segment.Group>
       <Segment>
@@ -32,7 +18,7 @@ const ActivityListItem = ({ activity }: Props) => {
                 {activity.title}
               </Item.Header>
               <Item.Description>Hosted by Bob</Item.Description>
-              {activity.isHost && (
+              {/* {activity.isHost && (
                 <Item.Description>
                   <Label basic color="orange">
                     You are hosting this activity
@@ -45,7 +31,7 @@ const ActivityListItem = ({ activity }: Props) => {
                     You are going to this activity
                   </Label>
                 </Item.Description>
-              )}
+              )} */}
             </Item.Content>
           </Item>
         </Item.Group>
@@ -59,6 +45,7 @@ const ActivityListItem = ({ activity }: Props) => {
       <Segment secondary>Attendees go here</Segment>
       <Segment clearing>
         <span>{activity.description}</span>
+
         <Button
           as={Link}
           to={`/activities/${activity.id}`}
