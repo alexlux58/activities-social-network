@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dYzix1nxVWjS9pRPuFMwsWkniLc5VzLkfkPrKVPAKfSrGVVkFnGuZswhFJdgnCy8+ASn3zKDqPjDvxR7lAiLZw==",
+  "dgSpecHash": "3m4kXM1XkEUpWDuRCxx3/0ucfBvWDc3606wqnSTVVuiih9EBwDK9H8deIxhX8r36HyNqpqVZ1zTI4OaARdemJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact-CS\\activities-social-network\\backend\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

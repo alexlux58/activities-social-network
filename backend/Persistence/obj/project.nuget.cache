@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C9+0D1Imbu8rJupbrasAiEgqlqh/Cdhs0A51T7bID8RLoM8WFlpgHRVu6W0jdX8TjGlxnSux5cR/fdjh/+Zi0g==",
+  "dgSpecHash": "+P2bb9++MG0IR93xo7K5SDGVo2VZa5P/SkIZSQeSXCFHZIRHzgrT4uCdtqlLEGgUmRIT14AHadFMMMzGm6sdZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact-CS\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
+  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.10\\microsoft.data.sqlite.core.7.0.10.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
