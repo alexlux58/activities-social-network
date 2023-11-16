@@ -1,22 +1,29 @@
 import { useEffect, useState } from "react";
-import { Button, Segment } from "semantic-ui-react";
+import { Button, Header, Segment } from "semantic-ui-react";
 import { useStore } from "../../../app/stores/store";
 import { observer } from "mobx-react-lite";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { Activity } from "../../../app/models/activity";
 import LoadingComponent from "../../../app/layout/LoadingComponent";
-// import { v4 as uuid } from "uuid";
+import { v4 as uuid } from "uuid";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import MyTextInput from "../../../app/common/form/MyTextInput";
-import MyTextArea from "./MyTextArea";
-import MySelectInput from "./MySelectInput";
+import MyTextArea from "../../../app/common/form/MyTextArea";
+import MySelectInput from "../../../app/common/form/MySelectInput";
 import { categoryOptions } from "../../../app/common/options/categoryOptions";
+import MyDateInput from "../../../app/common/form/MyDateInput";
 
 const ActivityForm = () => {
   const { activityStore } = useStore();
-  const { loading, loadActivity, loadingInitial } = activityStore;
-
+  const {
+    loading,
+    loadActivity,
+    loadingInitial,
+    createActivity,
+    updateActivity,
+  } = activityStore;
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   // const navigate = useNavigate();
 
@@ -25,7 +32,7 @@ const ActivityForm = () => {
     title: "",
     category: "",
     description: "",
-    date: "",
+    date: null,
     city: "",
     venue: "",
   });
@@ -43,18 +50,21 @@ const ActivityForm = () => {
     if (id) loadActivity(id).then((activity) => setActivity(activity!));
   }, [id, loadActivity]);
 
-  // const handleSubmit = () => {
-  //   if (!activity.id) {
-  //     activity.id = uuid();
-  //     createActivity(activity).then(() =>
-  //       navigate(`/activities/${activity.id}`)
-  //     );
-  //   } else {
-  //     updateActivity(activity).then(() =>
-  //       navigate(`/activities/${activity.id}`)
-  //     );
-  //   }
-  // };
+  const handleFormSubmit = (activity: Activity) => {
+    if (activity.id.length === 0) {
+      const newActivity = {
+        ...activity,
+        id: uuid(),
+      };
+      createActivity(newActivity).then(() =>
+        navigate(`/activities/${activity.id}`)
+      );
+    } else {
+      updateActivity(activity).then(() =>
+        navigate(`/activities/${activity.id}`)
+      );
+    }
+  };
 
   // const handleInputChange = (
   //   event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -67,13 +77,14 @@ const ActivityForm = () => {
 
   return (
     <Segment clearing>
+      <Header content="Activity Details" sub color="teal" />
       <Formik
         validationSchema={validationSchema}
         enableReinitialize
-        onSubmit={(values) => console.log(values)}
+        onSubmit={(values) => handleFormSubmit(values)}
         initialValues={activity}
       >
-        {({ handleSubmit }) => (
+        {({ handleSubmit, isValid, isSubmitting, dirty }) => (
           <Form className="ui form" onSubmit={handleSubmit} autoComplete="off">
             {/* <FormField>
               <Field placeholder="Title" name="title" />
@@ -82,7 +93,6 @@ const ActivityForm = () => {
                 render={(error) => <Label basic color="red" content={error} />}
               />
             </FormField> */}
-            <MyTextInput name="title" placeholder="Title" />
             <MyTextInput placeholder="Title" name="title" />
             <MyTextArea rows={3} placeholder="Description" name="description" />
             <MySelectInput
@@ -90,10 +100,18 @@ const ActivityForm = () => {
               name="category"
               options={categoryOptions}
             />
-            <MyTextInput type="date" placeholder="Date" name="date" />
+            <MyDateInput
+              placeholderText="Date"
+              name="date"
+              showTimeSelect
+              timeCaption="time"
+              dateFormat="MMMM d, yyyy h:mm aa"
+            />
+            <Header content="Location Details" sub color="teal" />
             <MyTextInput placeholder="City" name="city" />
             <MyTextInput placeholder="Venue" name="venue" />
             <Button
+              disabled={isSubmitting || !dirty || !isValid}
               loading={loading}
               floated="right"
               positive
