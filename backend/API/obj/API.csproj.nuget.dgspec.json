@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj": {}
+    "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj": {
+    "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\obj\\",
+        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj": {
-                "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj"
+              "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj"
               }
             }
           }
@@ -88,14 +88,14 @@
         }
       }
     },
-    "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj": {
+    "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\obj\\",
+        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -110,11 +110,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj"
+              "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj"
               },
-              "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
-                "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj"
+              "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -162,14 +162,14 @@
         }
       }
     },
-    "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
+    "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -221,14 +221,14 @@
         }
       }
     },
-    "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
+        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -243,8 +243,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj"
+              "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj"
               }
             }
           }

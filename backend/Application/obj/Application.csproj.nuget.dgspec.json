@@ -29,8 +29,8 @@
               "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Domain\\Domain.csproj"
               },
-              "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
-                "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj"
+              "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
+                "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -137,14 +137,14 @@
         }
       }
     },
-    "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
+    "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
+        "projectPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\Alex Lux\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\obj\\",
+        "outputPath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alex Lux\\AppData\\Roaming\\NuGet\\NuGet.Config"
