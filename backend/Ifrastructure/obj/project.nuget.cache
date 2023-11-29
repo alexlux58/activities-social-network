@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6xxE1OWytA8t2EiY3BLsKSCOvLns99zjfpX4YeUcOwn96WviBDHMPX4XTF7B0OwBCm/YMBOlxIUwBSGclHr3Ew==",
+  "dgSpecHash": "n+A5ss8V2wFD9rrNcc6TnbWTl16Sm1v/4IwVeVoVy+TlmIPPY8LbrjS/6DcsAnI1mmBCVhzsKs/mSQP3/oAbYQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact-CS\\activities-social-network\\backend\\Ifrastructure\\Ifrastructure.csproj",
+  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\Ifrastructure\\Ifrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Lux\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
