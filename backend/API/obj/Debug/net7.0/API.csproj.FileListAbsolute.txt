@@ -421,3 +421,5 @@ C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\API\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\API\bin\Debug\net7.0\Ifrastructure.dll
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\API\bin\Debug\net7.0\Ifrastructure.pdb
+C:\Users\Alex Lux\Desktop\activities-social-network\backend\API\bin\Debug\net7.0\Ifrastructure.dll
+C:\Users\Alex Lux\Desktop\activities-social-network\backend\API\bin\Debug\net7.0\Ifrastructure.pdb
