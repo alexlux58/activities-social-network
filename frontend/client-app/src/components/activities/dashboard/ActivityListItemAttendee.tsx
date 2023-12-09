@@ -19,7 +19,7 @@ const ActivityListItemAttendee = ({ attendees }: Props) => {
             <List.Item
               key={attendee.username}
               as={Link}
-              to={`/profile/${attendee.username}`}
+              to={`/profiles/${attendee.username}`}
             >
               <Image
                 size="mini"

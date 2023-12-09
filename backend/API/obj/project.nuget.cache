@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dCSwZDTn1XDxGMLFq5uhdX/fAedMK4ak28Kampb28RQC02+DVD20mh+bduXsNMT0XJ2AGpBk9pYLhFH0YAwV8g==",
+  "dgSpecHash": "Htb4eC3ZBs09N3Suf4lSpk0ws24LBdN84BnOStShVoQfD7nBRWjv6TYNdV+nvVf5/fEwj6GqTs5b8I8TbyLeIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\activities-social-network\\backend\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact-CS\\activities-social-network\\backend\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alex Lux\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
