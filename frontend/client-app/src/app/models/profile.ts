@@ -8,7 +8,7 @@ export interface IProfile {
   //   followersCount: number;
   //   followingCount: number;
   //   following: boolean;
-  // photos: Photo[];
+  photos?: IPhoto[];
 }
 
 export class Profile implements IProfile {
@@ -29,4 +29,11 @@ export class Profile implements IProfile {
   //   followersCount: number;
   //   followingCount: number;
   //   following: boolean;
+  photos?: IPhoto[];
+}
+
+export interface IPhoto {
+  id: string;
+  url: string;
+  isMain: boolean;
 }
