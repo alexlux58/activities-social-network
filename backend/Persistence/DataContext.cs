@@ -34,6 +34,8 @@ namespace Persistence
                 .HasOne(a => a.Activity)
                 .WithMany(c => c.Comments)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            
         }
     }
     
