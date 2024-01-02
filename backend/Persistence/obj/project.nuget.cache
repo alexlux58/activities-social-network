@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Xxq9UunYusAwCNdMWU9ioRxdChzHQyQ4+AM+uEr9pRNc3RRfI/bQiApm+WTC/TXvCaRq9RPIOrVN1LKfy+Radw==",
+  "dgSpecHash": "hq79qc2mL8Toqjt0NFp78fL68JxnslCnh9eatZCXzJ8fVJDFXN/2rHuvzDTSmwzRsTohaGoEqsubtNX/Uobd8Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact-CS\\activities-social-network\\backend\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,10 @@
     "C:\\Users\\Alex Lux\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.4\\sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\Alex Lux\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

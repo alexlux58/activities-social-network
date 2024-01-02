@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Htb4eC3ZBs09N3Suf4lSpk0ws24LBdN84BnOStShVoQfD7nBRWjv6TYNdV+nvVf5/fEwj6GqTs5b8I8TbyLeIQ==",
+  "dgSpecHash": "BA9Vv9JX+tpJB9VAwege5Gluod+2GsW4ui4YsTpXnrirlyl9HewZifbhYEN4S/flbiWmsFwM5h86FuraSVphLw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact-CS\\activities-social-network\\backend\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -113,7 +113,11 @@
     "C:\\Users\\Alex Lux\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
-    "C:\\Users\\Alex Lux\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }

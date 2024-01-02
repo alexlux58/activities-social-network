@@ -55,3 +55,4 @@ C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Domain\obj\Debug\net7.0\Domain.sourcelink.json

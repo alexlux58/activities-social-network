@@ -18,6 +18,7 @@ export default class ActivityStore {
   editMode = false;
   loading = false;
   loadingInitial = false;
+  // userActivities = Activities[]
 
   constructor() {
     makeAutoObservable(this);
@@ -244,6 +245,19 @@ export default class ActivityStore {
         this.loading = false;
       });
     }
+  };
+
+  updateAttendeeFollowing = (username: string) => {
+    this.activityRegistry.forEach((activity) => {
+      activity.attendees!.forEach((attendee) => {
+        if (attendee.username === username) {
+          attendee.following
+            ? attendee.followersCount--
+            : attendee.followersCount++;
+          attendee.following = !attendee.following;
+        }
+      });
+    });
   };
 
   clearSelectedActivity = () => {

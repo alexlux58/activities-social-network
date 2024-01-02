@@ -73,3 +73,4 @@ C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Persistence\obj\Debug\net7.0\refint\Persistence.dll
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Persistence\obj\Debug\net7.0\Persistence.pdb
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Persistence\obj\Debug\net7.0\ref\Persistence.dll
+C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Persistence\obj\Debug\net7.0\Persistence.sourcelink.json

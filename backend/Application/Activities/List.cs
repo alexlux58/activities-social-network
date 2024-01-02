@@ -1,4 +1,5 @@
 using Application.Core;
+using Application.Interfaces;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using Domain;
@@ -15,44 +16,23 @@ namespace Application.Activities
 
         public class Handler : IRequestHandler<Query, Result<List<ActivityDto>>>
         {
-            // private readonly ILogger<List> _logger;
             private readonly DataContext _context;
             private readonly IMapper _mapper;
-            public Handler(DataContext context, IMapper mapper,ILogger<List> logger)
+            private readonly IUserAccessor _userAccessor;
+            public Handler(DataContext context, IMapper mapper, IUserAccessor userAccessor)
             {
-            _mapper = mapper;
-                // _logger = logger;
+                _userAccessor = userAccessor;
                 _mapper = mapper;
                 _context = context;
             }
         
             public async Task<Result<List<ActivityDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
-                // try{
-                //     for (var i = 0; i < 10; i++)
-                //     {
-                //         cancellationToken.ThrowIfCancellationRequested();
-                //         await Task.Delay(1000, cancellationToken);
-                //         _logger.LogInformation($"Task {i} has completed");
-                //     }
-                // } catch(System.Exception ex) when (ex is TaskCanceledException) {
-                //     _logger.LogInformation("Task was cancelled");
-                // }
-
                 var activities = await _context.Activities
-                    // .Include(a => a.Attendees)
-                    // .ThenInclude(u => u.AppUser)
-                    .ProjectTo<ActivityDto>(_mapper.ConfigurationProvider)
+                    .ProjectTo<ActivityDto>(_mapper.ConfigurationProvider, new {currentUsername = _userAccessor.GetUserName()})
                     .ToListAsync(cancellationToken);
-
-                // var activitiesToReturn = _mapper.Map<List<ActivityDto>>(activities);
-
                 return Result<List<ActivityDto>>.Success(activities);
             }
-
-
         }
-
-        
     }
 }

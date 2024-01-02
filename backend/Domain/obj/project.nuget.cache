@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WC8jNRJY1+7XrlDhghJ2zlsWNgof7TbvjXVE39Xnky0GdOqIfLGjWKAfOyie2SOmN32dHf9ZWh4W/NJW3SMMyA==",
+  "dgSpecHash": "X9cIt6s/YTglzhS596N1H2HU/h9UVcAm5tzDqVN57D558g5bwA+cOyiB8IbnZD5sNnFjinKqecHEilIown4Sig==",
   "success": true,
   "projectFilePath": "C:\\Users\\Alex Lux\\Desktop\\WebDev\\LearnReact-CS\\activities-social-network\\backend\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
@@ -21,7 +21,10 @@
     "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
-    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\Alex Lux\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
