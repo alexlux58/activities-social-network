@@ -11,12 +11,20 @@ import LoadingComponent from "../../app/layout/LoadingComponent";
 export default observer(function ProfilePage() {
   const { username } = useParams<{ username: string }>();
   const { profileStore } = useStore();
-  const { loadingProfile, loadProfile, profile, setActiveTab } = profileStore;
+
+  const { loadingProfile, loadProfile, profile, setActiveTab } =
+    profileStore || {};
 
   useEffect(() => {
-    loadProfile(username);
+    if (loadProfile) {
+      if (username) {
+        loadProfile(username);
+      }
+    }
     return () => {
-      setActiveTab(0);
+      if (setActiveTab) {
+        setActiveTab(0);
+      }
     };
   }, [loadProfile, username, setActiveTab]);
 

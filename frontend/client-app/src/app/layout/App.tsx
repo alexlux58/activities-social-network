@@ -1,5 +1,5 @@
 import { Fragment, useEffect } from "react";
-import { Container, Modal } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import Navbar from "./Navbar";
 import "./styles.css";
 import { observer } from "mobx-react-lite";

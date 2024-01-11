@@ -10,19 +10,21 @@ interface Props {
 }
 
 const ProfilePhotos = ({ profile }: Props) => {
-  const {
-    profileStore: {
-      isCurrentUser,
-      uploadPhoto,
-      uploading,
-      loadingProfile,
-      setMainPhoto,
-      deletePhoto,
-    },
-  } = useStore();
-
   const [addPhotoMode, setAddPhotoMode] = useState(false);
   const [target, setTarget] = useState("");
+
+  const { profileStore } = useStore();
+
+  if (!profileStore) return null;
+
+  const {
+    isCurrentUser,
+    uploadPhoto,
+    uploading,
+    loadingProfile,
+    setMainPhoto,
+    deletePhoto,
+  } = profileStore;
 
   function handlePhotoUpload(file: Blob) {
     uploadPhoto(file).then(() => setAddPhotoMode(false));

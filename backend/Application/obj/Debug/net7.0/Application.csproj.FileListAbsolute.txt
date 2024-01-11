@@ -84,3 +84,4 @@ C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Application\obj\Debug\net7.0\Application.pdb
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Application\obj\Debug\net7.0\ref\Application.dll
 C:\Users\Alex Lux\Desktop\WebDev\LearnReact-CS\activities-social-network\backend\Application\obj\Debug\net7.0\Application.sourcelink.json
+C:\Users\Alex Lux\Desktop\activities-social-network\backend\Application\obj\Debug\net7.0\Application.sourcelink.json

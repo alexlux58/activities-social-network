@@ -6,7 +6,7 @@ import { Profile } from "../../app/models/profile";
 
 const ProfileFollowings = () => {
   const { profileStore } = useStore();
-  const { profile, loadingFollowings, followings, activeTab } = profileStore;
+  const { profile, loadingFollowings, followings, activeTab } = profileStore!;
 
   return (
     <Tab.Pane loading={loadingFollowings}>
