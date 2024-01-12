@@ -6,7 +6,7 @@ import ActivityDetails from "../../components/activities/details/ActivityDetails
 import TestErrors from "../../components/errors/TestError";
 import NotFound from "../../components/errors/NotFound";
 import ServerError from "../../components/errors/ServerError";
-import LoginForm from "../../components/users/LoginForm";
+// import LoginForm from "../../components/users/LoginForm";
 import ProfilePage from "../../components/profiles/ProfilePage";
 import RequireAuth from "./RequireAuth";
 
@@ -27,7 +27,7 @@ export const routes: RouteObject[] = [
         ],
       },
 
-      { path: "login", element: <LoginForm /> },
+      // { path: "login", element: <LoginForm /> },
       { path: "not-found", element: <NotFound /> },
       { path: "server-error", element: <ServerError /> },
       { path: "*", element: <Navigate replace to="/not-found" /> },

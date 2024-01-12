@@ -8,12 +8,11 @@ import { User, UserFormValues } from "../models/user";
 import { IPhoto, Profile } from "../models/profile";
 import { PaginatedResult } from "../models/pagination";
 
-axios.defaults.baseURL = import.meta.env.VITE_API_URL as string;
-
 const sleep = (delay: number) => {
   return new Promise((resolve) => setTimeout(resolve, delay));
 };
 
+axios.defaults.baseURL = import.meta.env.VITE_API_URL as string;
 const responseBody = <T>(response: AxiosResponse<T>) => response.data;
 
 axios.interceptors.request.use((config) => {
