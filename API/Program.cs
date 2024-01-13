@@ -22,7 +22,7 @@ builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 
 // Configure Kestrel server to listen on all interfaces on port 8080
-builder.WebHost.UseUrls("http://*:8080");
+// builder.WebHost.UseUrls("http://*:8080");
 
 var app = builder.Build();
 
