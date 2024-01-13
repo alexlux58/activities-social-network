@@ -1,18 +1,18 @@
-# fly.toml app configuration file generated for ironsocial-net on 2024-01-11T21:14:13-08:00
+# fly.toml app configuration file generated for ironsocial-net on 2024-01-12T18:07:35-08:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "ironsocial-net"
+app = "ironsocialnet-reactivities"
 primary_region = "lax"
 
 [build]
   image = "alexlux58/ironsocialnet-reactivities:latest"
 
 [env]
-  ASPNETCORE_URLS="http://+:8080"
-  Cloudinary__CloudName="dkpsijz7e"
-  Cloudinary__ApiKey="659838172771352"
+  ASPNETCORE_URLS = "http://+:8080"
+  Cloudinary__ApiKey = "659838172771352"
+  Cloudinary__CloudName = "dkpsijz7e"
 
 [http_service]
   internal_port = 8080
