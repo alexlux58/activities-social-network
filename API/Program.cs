@@ -13,15 +13,18 @@ using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// static IHostBuilder CreateHostBuilder(string[] args)
-// {
-//     return Host.CreateDefaultBuilder(args)
-//         .ConfigureWebHostDefaults(webBuilder =>
-//         {
-//             webBuilder.UseStartup<IStartup>()
-//                        .UseUrls("http://*:8080"); // Listen on port 8080 for all network interfaces
-//         });
-// }
+static IHostBuilder CreateHostBuilder(string[] args)
+{
+    return Host.CreateDefaultBuilder(args)
+        .ConfigureWebHostDefaults(webBuilder =>
+        {
+            webBuilder.UseStartup<IStartup>()
+                       .UseUrls("http://*:8080"); 
+                       // Listen on port 8080 for all network interfaces
+        });
+}
+
+CreateHostBuilder(args).Build().Run();
 
 // // Configure Kestrel server to listen on all interfaces
 

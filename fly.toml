@@ -7,10 +7,10 @@ app = "ironsocial-net"
 primary_region = "lax"
 
 [build]
-  image = "alexlux58/ironsocialnet-reactivites"
+  image = "alexlux58/ironsocialnet-reactivities:latest"
 
 [env]
-  ASPNETCORE_URLS="http://+8080"
+  
   Cloudinary__CloudName="dkpsijz7e"
   Cloudinary__ApiKey="659838172771352"
 
