@@ -3,7 +3,7 @@ import App from "../layout/App";
 import ActivityDashboard from "../../components/activities/dashboard/ActivityDashboard";
 import ActivityForm from "../../components/activities/form/ActivityForm";
 import ActivityDetails from "../../components/activities/details/ActivityDetails";
-import TestErrors from "../../components/errors/TestError";
+// import TestErrors from "../../components/errors/TestError";
 import NotFound from "../../components/errors/NotFound";
 import ServerError from "../../components/errors/ServerError";
 // import LoginForm from "../../components/users/LoginForm";
@@ -23,7 +23,7 @@ export const routes: RouteObject[] = [
           { path: "createActivity", element: <ActivityForm key="create" /> },
           { path: "manage/:id", element: <ActivityForm key="manage" /> },
           { path: "profiles/:username", element: <ProfilePage /> },
-          { path: "errors", element: <TestErrors /> },
+          // { path: "errors", element: <TestErrors /> },
         ],
       },
 
