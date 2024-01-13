@@ -9,36 +9,36 @@ export default function TestErrors() {
 
   function handleNotFound() {
     axios
-      .get(baseUrl + "buggy/not-found")
+      .get(baseUrl + "/buggy/not-found")
       .catch((err) => console.log(err.response));
   }
 
   function handleBadRequest() {
     axios
-      .get(baseUrl + "buggy/bad-request")
+      .get(baseUrl + "/buggy/bad-request")
       .catch((err) => console.log(err.response));
   }
 
   function handleServerError() {
     axios
-      .get(baseUrl + "buggy/server-error")
+      .get(baseUrl + "/buggy/server-error")
       .catch((err) => console.log(err.response));
   }
 
   function handleUnauthorized() {
     axios
-      .get(baseUrl + "buggy/unauthorized")
+      .get(baseUrl + "/buggy/unauthorized")
       .catch((err) => console.log(err.response));
   }
 
   function handleBadGuid() {
     axios
-      .get(baseUrl + "activities/notaguid")
+      .get(baseUrl + "/activities/notaguid")
       .catch((err) => console.log(err.response));
   }
 
   function handleValidationError() {
-    axios.post(baseUrl + "activities", {}).catch((err) => setErrors(err));
+    axios.post(baseUrl + "/activities", {}).catch((err) => setErrors(err));
   }
 
   return (
