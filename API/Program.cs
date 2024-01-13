@@ -13,29 +13,6 @@ using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
-static IHostBuilder CreateHostBuilder(string[] args)
-{
-    return Host.CreateDefaultBuilder(args)
-        .ConfigureWebHostDefaults(webBuilder =>
-        {
-            webBuilder.UseStartup<IStartup>()
-                       .UseUrls("http://*:8080"); 
-                       // Listen on port 8080 for all network interfaces
-        });
-}
-
-CreateHostBuilder(args).Build().Run();
-
-// // Configure Kestrel server to listen on all interfaces
-
-// builder.WebHost.ConfigureKestrel(serverOptions =>
-// {
-//     serverOptions.ListenAnyIP(8080); // Listen for incoming connections on port 8080 on all network interfaces
-// });
-
-
-// Add services to the container.
-
 builder.Services.AddControllers(opt => 
 {
     var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
@@ -44,7 +21,8 @@ builder.Services.AddControllers(opt =>
 builder.Services.AddApplicationServices(builder.Configuration);
 builder.Services.AddIdentityServices(builder.Configuration);
 
-
+// Configure Kestrel server to listen on all interfaces on port 8080
+builder.WebHost.UseUrls("http://*:8080");
 
 var app = builder.Build();
 
@@ -59,6 +37,7 @@ if (app.Environment.IsDevelopment())
 
 // app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
+
 app.UseAuthentication();
 app.UseAuthorization();
 
