@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: alexlu58/alexlux58/ironsocialnet-reactivities:latest
+          tags: alexlux58/ironsocialnet-reactivities:latest
