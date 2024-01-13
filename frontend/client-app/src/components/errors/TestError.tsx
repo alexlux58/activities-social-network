@@ -9,27 +9,35 @@ export default function TestErrors() {
   // const baseUrl = import.meta.env.VITE_API_URL;
 
   function handleNotFound() {
-    axios.get("/buggy/not-found").catch((err) => console.log(err.response));
+    axios.get("api/buggy/not-found").catch((err) => console.log(err.response));
   }
 
   function handleBadRequest() {
-    axios.get("/buggy/bad-request").catch((err) => console.log(err.response));
+    axios
+      .get("api/buggy/bad-request")
+      .catch((err) => console.log(err.response));
   }
 
   function handleServerError() {
-    axios.get("/buggy/server-error").catch((err) => console.log(err.response));
+    axios
+      .get("api/buggy/server-error")
+      .catch((err) => console.log(err.response));
   }
 
   function handleUnauthorized() {
-    axios.get("/buggy/unauthorized").catch((err) => console.log(err.response));
+    axios
+      .get("api/buggy/unauthorized")
+      .catch((err) => console.log(err.response));
   }
 
   function handleBadGuid() {
-    axios.get("/activities/notaguid").catch((err) => console.log(err.response));
+    axios
+      .get("api/activities/notaguid")
+      .catch((err) => console.log(err.response));
   }
 
   function handleValidationError() {
-    axios.post("/activities", {}).catch((err) => setErrors(err));
+    axios.post("api/activities", {}).catch((err) => setErrors(err));
   }
 
   return (
