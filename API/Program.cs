@@ -29,16 +29,40 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 app.UseMiddleware<ExceptionMiddleware>();
 
+app.UseXContentTypeOptions();
+app.UseReferrerPolicy(opt => opt.NoReferrer());
+app.UseXXssProtection(opt => opt.EnabledWithBlockMode());
+app.UseXfo(opt => opt.Deny());
+app.UseCsp(opt => opt
+    .BlockAllMixedContent()
+    .StyleSources(s => s.Self().CustomSources("https://fonts.googleapis.com"))
+    .FontSources(s => s.Self().CustomSources("https://fonts.gstatic.com", "data:"))
+    .FormActions(s => s.Self())
+    .FrameAncestors(s => s.Self())
+    .ImageSources(s => s.Self().CustomSources("bolb:","https://res.cloudinary.com"))
+    .ScriptSources(s => s.Self().CustomSources("sha256-3qTlJ3Zl3zv8Z9Zz3zv8Z9Zz3z"))
+    );
+
+    
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+else
+{
+    // app.UseHsts(opt => opt.MaxAge(365).IncludeSubdomains());
+    app.Use(async (context, next) =>
+    {
+        context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000");
+        await next.Invoke();
+    });
+}
 
 // app.UseHttpsRedirection();
 app.UseCors("CorsPolicy");
-
-
 
 app.UseAuthentication();
 app.UseAuthorization();
