@@ -29,6 +29,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 app.UseMiddleware<ExceptionMiddleware>();
 
+// Security Headers
 app.UseXContentTypeOptions();
 app.UseReferrerPolicy(opt => opt.NoReferrer());
 app.UseXXssProtection(opt => opt.EnabledWithBlockMode());
@@ -53,6 +54,7 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
+    // Security Header
     // app.UseHsts(opt => opt.MaxAge(365).IncludeSubdomains());
     app.Use(async (context, next) =>
     {
