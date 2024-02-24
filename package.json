@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@greatsumini/react-facebook-login": "^3.3.3",
+    "@types/react": "^18.2.57"
+  }
+}

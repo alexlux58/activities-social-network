@@ -1,9 +1,20 @@
 import { Link } from "react-router-dom";
-import { Container, Header, Segment, Image, Button } from "semantic-ui-react";
+import {
+  Container,
+  Header,
+  Segment,
+  Image,
+  Button,
+  Divider,
+} from "semantic-ui-react";
 import { useStore } from "../../app/stores/store";
 import { observer } from "mobx-react-lite";
 import LoginForm from "../users/LoginForm";
 import RegisterForm from "../users/RegisterForm";
+import FacebookLogin, {
+  FailResponse,
+  SuccessResponse,
+} from "@greatsumini/react-facebook-login";
 
 const HomePage = () => {
   const { userStore, modalStore } = useStore();
@@ -51,6 +62,20 @@ const HomePage = () => {
             >
               Register!
             </Button>
+            <Divider horizontal inverted>
+              Or
+            </Divider>
+            <FacebookLogin
+              appId="1408987516674601"
+              onSuccess={(response: SuccessResponse) => {
+                userStore.facebookLogin(response.accessToken);
+                // console.log("Login Success", response);
+              }}
+              onFail={(err: FailResponse) => console.log("Login Failed", err)}
+              className={`ui facebook button huge inverted ${
+                userStore.fbLoading && "loading"
+              }`}
+            />
           </>
         )}
       </Container>

@@ -6,6 +6,7 @@ import { router } from "../router/Routes";
 
 export default class UserStore {
   user: User | null = null;
+  fbLoading = false;
 
   constructor() {
     makeAutoObservable(this);
@@ -17,13 +18,15 @@ export default class UserStore {
 
   login = async (creds: UserFormValues) => {
     try {
+      // console.log("Attempting to log in with credentials:", creds);
       const user = await agent.Account.login(creds);
+      console.log("Login successful, user:", user);
       store.commonStore.setToken(user.token);
       runInAction(() => (this.user = user));
       router.navigate("/activities");
       store.modalStore?.closeModal();
     } catch (error) {
-      console.log(error);
+      console.error("Login failed", error);
       throw error;
     }
   };
@@ -66,5 +69,24 @@ export default class UserStore {
 
   setUsername = (username: string) => {
     if (this.user) this.user.username = username;
+  };
+
+  facebookLogin = async (accessToken: string) => {
+    this.fbLoading = true;
+    try {
+      const user = await agent.Account.fblogin(accessToken);
+      store.commonStore.setToken(user.token);
+      runInAction(() => {
+        this.user = user;
+        this.fbLoading = false;
+      });
+      router.navigate("/activities");
+      store.modalStore?.closeModal();
+    } catch (error) {
+      console.log(error);
+      runInAction(() => (this.fbLoading = false));
+    } finally {
+      runInAction(() => (this.fbLoading = false));
+    }
   };
 }
