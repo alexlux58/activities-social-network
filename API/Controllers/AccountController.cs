@@ -1,10 +1,13 @@
 using System.Security.Claims;
+using System.Text;
 using API.DTOs;
 using API.Services;
 using Domain;
+using Ifrastructure.Email;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
@@ -20,9 +23,12 @@ namespace API.Controllers
         private readonly IConfiguration _config;
         private readonly HttpClient _httpClient;
         private readonly ILogger<AccountController> _logger;
+        private readonly SignInManager<AppUser> _signInManager;
+        private readonly EmailSender _emailSender;
 
 
-        public AccountController(UserManager<AppUser> userManager, TokenService tokenService, IConfiguration config, ILogger<AccountController> logger)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, 
+        TokenService tokenService, IConfiguration config, ILogger<AccountController> logger, EmailSender emailSender)
         {
             _logger = logger;
             _userManager = userManager;
@@ -32,7 +38,9 @@ namespace API.Controllers
             {
                 BaseAddress = new Uri("https://graph.facebook.com")
             };
+            _emailSender = emailSender;
         }
+        
         [AllowAnonymous]
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
@@ -44,22 +52,28 @@ namespace API.Controllers
             if(user == null) 
             {
                 _logger.LogWarning("Login failed for email {Email}: User not found", loginDto.Email);
-                return Unauthorized();
+                return Unauthorized("Invalid email");
             }
 
-            var result = await _userManager.CheckPasswordAsync(user, loginDto.Password);
+            if(!user.EmailConfirmed)
+            {
+                return Unauthorized("Email not confirmed");
+            }
 
-            if(!result)
+            var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
+            if(!result.Succeeded)
             {
                 _logger.LogWarning("Login failed for email {Email}: Incorrect password", loginDto.Email);
             }
             
-            if(result)
+            if(result.Succeeded)
             {
+                await SetRefreshToken(user);
                 return CreateUserObject(user);
             }
 
-            return Unauthorized();
+            return Unauthorized("Invalid password");
         }
         [AllowAnonymous]
         [HttpPost("register")]
@@ -86,12 +100,85 @@ namespace API.Controllers
 
             var result = await _userManager.CreateAsync(user, registerDto.Password);
 
-            if(result.Succeeded)
-            {
-                return CreateUserObject(user);
-            }
+            if (!result.Succeeded) return BadRequest("Problem registering user");
 
-            return BadRequest(result.Errors );
+            var origin = Request.Headers["origin"];
+
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+
+            token = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+
+            var verifyUrl = $"{origin}/account/verifyEmail?token={token}&email={user.Email}";
+
+            var message = $"<p>Please click the below link to verify your email address:</p><p><a href='{verifyUrl}'>{verifyUrl}</a></p>";
+
+            await _emailSender.SendEmailAsync(user.Email, "Please verify email", message);
+
+            return Ok("Registration successful - please verify your email address");
+            
+        }
+
+        [AllowAnonymous]
+        [HttpPost("verifyEmail")]
+        public async Task<ActionResult> VerifyEmail(string token, string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if(user == null) return Unauthorized("Invalid email");
+
+            token = Encoding.UTF8.GetString(WebEncoders.Base64UrlDecode(token));
+
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+
+            if(!result.Succeeded) return BadRequest("Could not confirm email");
+
+            return Ok("Email confirmed - you can now login");
+        }
+
+        [AllowAnonymous]
+        [HttpPost("forgotPassword")]
+        public async Task<ActionResult> ForgotPassword(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if(user == null) return Unauthorized("Invalid email");
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var origin = Request.Headers["origin"];
+
+            var resetUrl = $"{origin}/account/resetPassword?token={token}&email={email}";
+
+            var message = $"<p>Please click the below link to reset your password:</p><p><a href='{resetUrl}'>{resetUrl}</a></p>";
+
+            await _emailSender.SendEmailAsync(email, "Reset Password", message);
+
+            return Ok("Password reset email sent");
+        }
+
+        [AllowAnonymous]
+        [HttpGet("resendEmailConfirmation")]
+        public async Task<ActionResult> ResendEmailConfirmation(string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+
+            if(user == null) return Unauthorized("Invalid email");
+
+            if(user.EmailConfirmed) return BadRequest("Email already confirmed");
+
+            var origin = Request.Headers["origin"];
+
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+
+            token = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
+
+            var verifyUrl = $"{origin}/account/verifyEmail?token={token}&email={user.Email}";
+
+            var message = $"<p>Please click the below link to verify your email address:</p><p><a href='{verifyUrl}'>{verifyUrl}</a></p>";
+
+            await _emailSender.SendEmailAsync(user.Email, "Please verify email", message);
+
+            return Ok("Email verification email sent");
         }
 
         
@@ -100,7 +187,7 @@ namespace API.Controllers
         public async Task<ActionResult<UserDto>> GetCurrentUser()
         {
             var user = await _userManager.Users.Include(p => p.Photos).FirstOrDefaultAsync(x => x.Email == User.FindFirstValue(ClaimTypes.Email));
-            
+            await SetRefreshToken(user);
             return CreateUserObject(user);
         }
 
@@ -150,10 +237,58 @@ namespace API.Controllers
 
             if(result.Succeeded)
             {
+                await SetRefreshToken(user);
                 return CreateUserObject(user);
             }
 
             return BadRequest("Problem registering user");
+
+        }
+
+        [Authorize]
+        [HttpPost("refreshToken")]
+        public async Task<ActionResult<UserDto>> RefreshToken()
+        {
+            var refreshToken = Request.Cookies["refreshToken"];
+            var user = await _userManager.Users.Include(r => r.RefreshTokens).Include(p => p.Photos).FirstOrDefaultAsync(x => x.UserName == User.FindFirstValue(ClaimTypes.Name));
+
+            if (user == null) return Unauthorized();
+
+            if (!user.RefreshTokens.Any(x => x.IsActive))
+            {
+                return Unauthorized();
+            }
+
+            var oldToken = user.RefreshTokens.SingleOrDefault(x => x.Token == refreshToken);
+
+            if (!oldToken.IsActive && oldToken != null)
+            {
+                return Unauthorized();
+            }
+
+            if(oldToken != null)
+            {
+                oldToken.Revoked = DateTime.UtcNow;
+            }
+
+
+            return CreateUserObject(user);
+        }
+
+        private async Task SetRefreshToken(AppUser user)
+        {
+            var refreshToken = _tokenService.GetRefreshToken();
+            user.RefreshTokens.Add(refreshToken);
+            await _userManager.UpdateAsync(user);
+
+            var cookieOptions = new CookieOptions
+            {
+                HttpOnly = true,
+                Expires = DateTime.UtcNow.AddDays(7)
+            };
+
+            Response.Cookies.Append("refreshToken", refreshToken.Token, cookieOptions);
+
 
         }
 

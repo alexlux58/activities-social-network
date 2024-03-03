@@ -7,6 +7,7 @@ using Application.Core;
 using Application.Interfaces;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Ifrastructure.Email;
 using Ifrastructure.Photos;
 using Ifrastructure.Security;
 using Microsoft.EntityFrameworkCore;
@@ -75,6 +76,7 @@ namespace API.Extensions
                     policy.AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials()
+                    .WithExposedHeaders("WWW-Authenticate", "Pagination")
                     .WithOrigins("http://localhost:3000", "https://localhost:3000");
                 });
             });
@@ -85,6 +87,7 @@ namespace API.Extensions
             services.AddValidatorsFromAssemblyContaining<Create>();
             services.AddHttpContextAccessor();
             services.AddScoped<IUserAccessor, UserAccessor>();
+            services.AddScoped<EmailSender>();
             services.Configure<CloudinarySettings>(config.GetSection("Cloudinary"));
             services.AddScoped<IPhotoAccessor, PhotoAccessor>();
             services.AddSignalR();

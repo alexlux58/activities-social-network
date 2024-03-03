@@ -9,6 +9,8 @@ import ServerError from "../../components/errors/ServerError";
 // import LoginForm from "../../components/users/LoginForm";
 import ProfilePage from "../../components/profiles/ProfilePage";
 import RequireAuth from "./RequireAuth";
+import RegisterSuccess from "../../components/users/RegisterSuccess";
+import ConfirmEmail from "../../components/users/ConfirmEmail";
 
 export const routes: RouteObject[] = [
   {
@@ -30,6 +32,8 @@ export const routes: RouteObject[] = [
       // { path: "login", element: <LoginForm /> },
       { path: "not-found", element: <NotFound /> },
       { path: "server-error", element: <ServerError /> },
+      { path: "account/registerSuccess", element: <RegisterSuccess /> },
+      { path: "account/verifyEmail", element: <ConfirmEmail /> },
       { path: "*", element: <Navigate replace to="/not-found" /> },
     ],
   },

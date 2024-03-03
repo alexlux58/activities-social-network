@@ -3,3 +3,5 @@
 dotnet ef database drop -s API -p Persistance
 
 dotnet ef migrations script -o test.sql -p Persistance -s API
+
+dotnet ef migrations add RefreshTokens -p Persistance -s API
